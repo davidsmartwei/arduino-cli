@@ -53,7 +53,7 @@ func runInstallCommand(cmd *cobra.Command, args []string) {
 		os.Exit(errorcodes.ErrGeneric)
 	}
 
-	boardArg := args[1]
+	boardArg := args[0]
 	logrus.WithField("board", boardArg).Info("Executing `board install`")
 
 	boardInstallReq := &rpc.BoardInstallReq{
